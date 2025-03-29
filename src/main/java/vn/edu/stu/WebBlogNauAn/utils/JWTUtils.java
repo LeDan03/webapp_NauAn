@@ -19,6 +19,7 @@
 
         @Value("${security.jwt.expiration-time}")
         private long expirationTime;
+
         public JWTUtils() {
             logger.info("JWTUtils initialized with secretKey: {} and expirationTime: {}");
         }

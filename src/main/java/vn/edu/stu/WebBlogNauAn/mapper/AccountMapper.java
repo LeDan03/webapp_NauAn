@@ -9,8 +9,12 @@ import vn.edu.stu.WebBlogNauAn.model.Account;
 @Component
 public class AccountMapper {
 
+    private final ModelMapper modelMapper;
+
     @Autowired
-    private ModelMapper modelMapper;
+    public AccountMapper(ModelMapper modelMapper) {
+        this.modelMapper = modelMapper;
+    }
 
     public Account toAccount(RegisterDto registerDto) {
         return modelMapper.map(registerDto, Account.class);
